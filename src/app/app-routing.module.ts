@@ -4,6 +4,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { UserpostComponent } from './userpost/userpost.component';
 
 const routes: Routes = [
+  {path:'', component:HomepageComponent},
   {path:"homepage",component:HomepageComponent},
   {path:"userpost",component:UserpostComponent}
 ];
