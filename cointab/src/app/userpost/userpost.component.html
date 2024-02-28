@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>usepost</title>
+</head>
+<body>
+    
+<h1>Post Page</h1>
+<div>
+  <button type="button" class="btn btn-primary" (click)="bulkAdd()" *ngIf="bulkAddVisible">Bulk Add</button>
+  <button type="button" class="btn btn-primary" (click)="downloadExcel()" *ngIf="downloadExcelVisible">Download in Excel</button>
+</div>
+
+<table class="table border">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Title</th>
+      <th scope="col">Body</th>
+      <th scope="col">Company</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let post of posts">
+      <td>{{ post.userId }}</td>
+      <td>{{ post.title }}</td>
+      <td>{{ post.body }}</td>
+      <td>{{ post.company.name }}</td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>
